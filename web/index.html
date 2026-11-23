@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shark vs Phones</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: linear-gradient(#0b3d5c, #06243a);
+      color: #fff;
+      text-align: center;
+      min-height: 100vh;
+    }
+    h1 { margin: 24px 0 8px; }
+    #status { font-size: 1.2rem; min-height: 1.6em; }
+    #stage { position: relative; display: inline-block; margin-top: 8px; }
+    video, canvas {
+      width: 640px;
+      max-width: 95vw;
+      border-radius: 12px;
+      display: block;
+    }
+    video { filter: hue-rotate(10deg) saturate(0.8) brightness(0.9); }
+    canvas { position: absolute; left: 0; top: 0; height: 100%; }
+    #score { font-size: 1.4rem; font-weight: bold; }
+    .note { opacity: 0.7; font-size: 0.9rem; }
+    a { color: #8fd3ff; }
+  </style>
+</head>
+<body>
+  <h1>🦈 Shark vs Phones</h1>
+  <p id="status">Starting…</p>
+  <div id="stage">
+    <video id="cam" autoplay playsinline muted></video>
+    <canvas id="overlay"></canvas>
+  </div>
+  <p id="score">Phones eaten: 0</p>
+  <p class="note">
+    Your camera stays on your device. The model runs in your browser; nothing is uploaded or saved.<br>
+    Model: <a href="https://huggingface.co/MuminjonPI/shark-phone-detector" target="_blank" rel="noopener">MuminjonPI/shark-phone-detector</a>
+  </p>
+
+  <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
