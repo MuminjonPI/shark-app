@@ -6,7 +6,7 @@ A webcam game where a shark "eats" any phone you hold up to the camera. A custom
 
 | | Link |
 |---|---|
-| Live app (Vercel) | `https://shark-app-web.vercel.app/` |
+| Live app (Vercel) | https://shark-app-web.vercel.app/ |
 | Model (Hugging Face) | https://huggingface.co/MuminjonPI/shark-phone-detector |
 | Demo app (Hugging Face Space) | https://huggingface.co/spaces/MuminjonPI/shark-app |
 | Training notebook | [`notebook/train.ipynb`](notebook/train.ipynb) |
